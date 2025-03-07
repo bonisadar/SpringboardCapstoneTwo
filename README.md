@@ -68,9 +68,9 @@ to transform the data into a structured format for machine learning.
 3. Text Similarity-Based Features:
    - To detect deceptive domains, we compared TLDs against a legitimate TLD list from Wikipedia, using:
 
-  a. Levenshtein Distance (Fuzzy Score)<br>
-  b. Damerau-Levenshtein Normalized Distance<br>
-  c. Jaro-Winkler Algorithm<br>
+       a. Levenshtein Distance (Fuzzy Score)<br>
+       b. Damerau-Levenshtein Normalized Distance<br>
+       c. Jaro-Winkler Algorithm<br>
 
 4. Unique Word Chunks:
    - Extracted distinctive word patterns from FQDNs to match against known phishing and legitimate word patterns.
