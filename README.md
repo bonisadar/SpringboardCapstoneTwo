@@ -21,25 +21,25 @@ sources like robots.txt, CSS values, or WHOIS records. Scraping such information
 it may not even be available. By leveraging a simple yet effective methodology, this approach enables efficient 
 phishing URL detection with minimal computational overhead.
 
-Key Methodological Choices:
+### Key Methodological Choices:
 
-• URL-Based Feature Engineering: Extracting meaningful attributes from URLs.
+  • URL-Based Feature Engineering: Extracting meaningful attributes from URLs.
 
-• Caching for Performance Optimization: We use Python’s @lru_cache(maxsize=None) from the functools module to store 
+  • Caching for Performance Optimization: We use Python’s @lru_cache(maxsize=None) from the functools module to store 
 function results, improving computational efficiency.
 
-• Machine Learning Classifiers: Multiple models are trained to detect phishing URLs based on extracted features.
+  • Machine Learning Classifiers: Multiple models are trained to detect phishing URLs based on extracted features.
 
-Features Used for Detection:
+### Features Used for Detection:
 
-• URL Length<br>
-• Top-Level Domain (TLD) Similarity Scores<br>
-• Probability Distribution of Special Characters<br>
-• Entropy-Based Analysis (Measures randomness in URLs)<br>
-• Obfuscation Detection (Encoded characters, hexadecimal IPs, hidden redirections)<br>
-• Text Similarity Metrics (To identify deceptive domain names)<br>
-• Word-Based Features (Using NLTK's English corpus)<br>
-• Log Transformations (To normalize skewed data)<br>
+  • URL Length<br>
+  • Top-Level Domain (TLD) Similarity Scores<br>
+  • Probability Distribution of Special Characters<br>
+  • Entropy-Based Analysis (Measures randomness in URLs)<br>
+  • Obfuscation Detection (Encoded characters, hexadecimal IPs, hidden redirections)<br>
+  • Text Similarity Metrics (To identify deceptive domain names)<br>
+  • Word-Based Features (Using NLTK's English corpus)<br>
+  • Log Transformations (To normalize skewed data)<br>
 
 ## Data Sources
 
