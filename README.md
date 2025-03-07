@@ -94,7 +94,7 @@ We implemented and evaluated multiple classifiers using Python’s scikit-learn 
   - XGBoost Classifier
 
 
-Feature Engineering with TF-IDF and Dimensionality Reduction:
+### Feature Engineering with TF-IDF and Dimensionality Reduction:
 
 In addition to URL-based features, we incorporated text-based features using Term Frequency-Inverse Document Frequency 
 (TF-IDF).
