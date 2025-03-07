@@ -32,14 +32,14 @@ function results, improving computational efficiency.
 
 Features Used for Detection:
 
-• URL Length
-• Top-Level Domain (TLD) Similarity Scores
-• Probability Distribution of Special Characters
-• Entropy-Based Analysis (Measures randomness in URLs)
-• Obfuscation Detection (Encoded characters, hexadecimal IPs, hidden redirections)
-• Text Similarity Metrics (To identify deceptive domain names)
-• Word-Based Features (Using NLTK's English corpus)
-• Log Transformations (To normalize skewed data)
+• URL Length<br>
+• Top-Level Domain (TLD) Similarity Scores<br>
+• Probability Distribution of Special Characters<br>
+• Entropy-Based Analysis (Measures randomness in URLs)<br>
+• Obfuscation Detection (Encoded characters, hexadecimal IPs, hidden redirections)<br>
+• Text Similarity Metrics (To identify deceptive domain names)<br>
+• Word-Based Features (Using NLTK's English corpus)<br>
+• Log Transformations (To normalize skewed data)<br>
 
 ## Data Sources
 
@@ -58,40 +58,40 @@ to transform the data into a structured format for machine learning.
 ### Key Feature Engineering Steps:
 
 1. Extracting URL Components:
-• Fully Qualified Domain Name (FQDN)
-• Top-Level Domain (TLD)
+   - Fully Qualified Domain Name (FQDN)
+   - Top-Level Domain (TLD)
 
 2. Shannon Entropy-Based Features:
-• Phishing URLs tend to be more random than legitimate URLs. We used Shannon Entropy to quantify randomness in URL 
-• structures.
+   - Phishing URLs tend to be more random than legitimate URLs. We used Shannon Entropy to quantify randomness in URL 
+  structures.
 
 3. Text Similarity-Based Features:
-• To detect deceptive domains, we compared TLDs against a legitimate TLD list from Wikipedia, using:
+   - To detect deceptive domains, we compared TLDs against a legitimate TLD list from Wikipedia, using:
 
-  a. Levenshtein Distance (Fuzzy Score)
-  b. Damerau-Levenshtein Normalized Distance
-  c. Jaro-Winkler Algorithm
+  a. Levenshtein Distance (Fuzzy Score)<br>
+  b. Damerau-Levenshtein Normalized Distance<br>
+  c. Jaro-Winkler Algorithm<br>
 
 4. Unique Word Chunks:
-• Extracted distinctive word patterns from FQDNs to match against known phishing and legitimate word patterns.
+   - Extracted distinctive word patterns from FQDNs to match against known phishing and legitimate word patterns.
 
 5. URL Obfuscation Detection:
-• Identified techniques like hexadecimal/octal IP representations, encoded characters (%2F instead of /), and hidden 
-  redirections.
-• Calculated entropy to detect obfuscation attempts.
+   - Identified techniques like hexadecimal/octal IP representations, encoded characters (%2F instead of /), and hidden 
+     redirections.<br>
+   - Calculated entropy to detect obfuscation attempts.
 
 6. Log Transformations:
-Many ML algorithms perform better when features follow a normal distribution.
-• Applied log transformation to reduce skewness in numerical features.
+   Many ML algorithms perform better when features follow a normal distribution.<br>
+   - Applied log transformation to reduce skewness in numerical features.
 
 
 ## Machine learning Algorithms
 
 We implemented and evaluated multiple classifiers using Python’s scikit-learn library:
 
-• K-Nearest Neighbors (K-NN)
-• Support Vector Classifier (SVC)
-• XGBoost Classifier
+  - K-Nearest Neighbors (K-NN)
+  - Support Vector Classifier (SVC)
+  - XGBoost Classifier
 
 
 Feature Engineering with TF-IDF and Dimensionality Reduction:
@@ -100,8 +100,8 @@ In addition to URL-based features, we incorporated text-based features using Ter
 (TF-IDF).
 
 ### Why TF-IDF?
-  - Phishing URLs often contain misleading terms to trick users.
-  -TF-IDF helps capture word patterns that indicate phishing attempts.
+  - Phishing URLs often contain misleading terms to trick users.<br>
+  - TF-IDF helps capture word patterns that indicate phishing attempts.
   
 ### Dimensionality Reduction with TruncatedSVD
 
