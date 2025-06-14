@@ -1,0 +1,16 @@
+Sl no. Model         Parameters                           Accuracy  Status       Precision   Recall    f1-score  Confusion Matrix
+--------------------------------------------------------------------------------------------------------------------------------
+1      KNN           n_neighbors=10, weights='distance'   0.8952    legit:   0   0.89        0.89      0.89      [[67767   8424]
+                     metric=euclidean                               phishing:1   0.90        0.90      0.90       [8496   76836]] 
+
+
+2      SVC           kernel='rbf', C=10.0, gamma=0.1,     0.8964    legit:   0   0.91        0.87      0.89      [[66276    9915]
+                     class_weight={0:1, 1:1.2}                      phishing:1   0.89        0.92      0.90       [6819    78513]]
+
+
+3      XGBoost       n_estimators=150, max_depth=7,       0.9087    legit:   0   0.94        0.86      0.90      [[65579   10612]
+       Classifier    learning_rate=0.1, gamma=0.1,                  phishing:1   0.88        0.95      0.92       [4137    81195]]
+       with TF-IDF   subsample=0.8, colsample_bytree=1.0,
+       applied on    reg_lambda=1.0, reg_alpha=0.01,
+       'url'         scale_pos_weight=1.5, 
+                     eval_metric='logloss'
