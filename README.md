@@ -35,8 +35,8 @@ function results, improving computational efficiency.
   • URL Length<br>
   • Extracting the Fully Qualified Domain Name (FQDN)<br>
   • Top-Level Domain (TLD) Similarity Scores<br>
-	- Used A pandas DataFrame containing legitimate top level domains extracted from wikipedia<br>
-	- https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains<br>
+	  - Used A pandas DataFrame containing legitimate top level domains extracted from wikipedia<br>
+	  - https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains<br>
   • Probability Distribution of Special Characters<br>
   • Entropy-Based Analysis (Measures randomness in URLs)<br>
   • Obfuscation Detection (Encoded characters, hexadecimal IPs, hidden redirections)<br>
